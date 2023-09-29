@@ -29,10 +29,10 @@ public class PossitionController {
 
 		List<PossitonDto> dtos = new ArrayList<>();
 
-		for (Position entity : entities) {
-			PossitonDto dto = new PossitonDto(entity.getId(), entity.getName().toString());
-			dtos.add(dto);
-		}
+//		for (Position entity : entities) {
+//			PossitonDto dto = new PossitonDto(entity.getId(), entity.getName().toString());
+//			dtos.add(dto);
+//		}
 
 		return new ResponseEntity<>(dtos, HttpStatus.OK);
 	}
