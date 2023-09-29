@@ -16,6 +16,10 @@ import com.vti.dto.PossitonDto;
 import com.vti.entity.Position;
 import com.vti.service.IPossitionService;
 
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+	
+
 @RestController
 @RequestMapping(value = "api/v1/possitions")
 @CrossOrigin("*")
@@ -36,6 +40,17 @@ public class PossitionController {
 //		}
 
 		return new ResponseEntity<>(dtos, HttpStatus.OK);
+	}
+	@PutMapping(value = "/{id}")
+	public ResponseEntity<?> updatePossiton() {
+	
+		return new ResponseEntity<String>("Update successfully!", HttpStatus.OK);
+	}
+
+	@DeleteMapping(value = "/{id}")
+	public ResponseEntity<?> deletePossiton() {
+		
+		return new ResponseEntity<String>("Delete successfully!", HttpStatus.OK);
 	}
 
 	@PostMapping()
